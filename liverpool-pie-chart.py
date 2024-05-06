@@ -3,12 +3,15 @@ import matplotlib.pyplot as plt
 
 def pieChart(labels, vals, season, stat):
     fig = plt.figure(figsize = (20, 5))
+    
+    customcolors = [];
 
-    # creating the bar plot
-    plt.pie(vals, labels=labels, autopct='%1.1f%%')
+    for index, value in enumerate(vals):
+        customcolors.append("#" + format(index * 20 + 150, "02x") + "0000")
+    print(customcolors)
+    plt.pie(vals, labels=labels, colors=customcolors, autopct='%1.1f%%')
 
     plt.title("Liverpool FC Player " + stat + " for " + seasonName(season))
-    plt.legend(loc=2)
     plt.show()
     
 def seasonName(year):
@@ -105,12 +108,3 @@ while (ans1 != 0 and ans2 != 0):
         stats.append(v[stat])
 
     pieChart(players, stats, season, stat)
-
-
-
-
-
-
-
-
-
