@@ -2,14 +2,20 @@ import numpy as np
 import matplotlib.pyplot as plt 
 
 def pieChart(labels, vals, season, stat):
-    fig = plt.figure(figsize = (20, 5))
+    fig = plt.figure(figsize = (8, 8))
     
     customcolors = [];
+    customexplode = [];
 
     for index, value in enumerate(vals):
         customcolors.append("#" + format(index * 20 + 150, "02x") + "0000")
-    print(customcolors)
-    plt.pie(vals, labels=labels, colors=customcolors, autopct='%1.1f%%')
+        
+        if (value == max(vals)):
+            customexplode.append(0.1)
+        else:
+            customexplode.append(0)
+            
+    plt.pie(vals, labels=labels, colors=customcolors, explode=customexplode, autopct='%1.1f%%')
 
     plt.title("Liverpool FC Player " + stat + " for " + seasonName(season))
     plt.show()
