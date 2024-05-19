@@ -1,8 +1,7 @@
-import numpy as np
 import matplotlib.pyplot as plt 
 
 def pieChart(labels, vals, season, stat):
-    fig = plt.figure(figsize = (8, 8))
+    plt.figure(figsize = (8, 8))
     
     customcolors = [];
     customexplode = [];
