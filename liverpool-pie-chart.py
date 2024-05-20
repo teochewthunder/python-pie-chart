@@ -14,7 +14,7 @@ def pieChart(labels, vals, season, stat):
         else:
             customexplode.append(0)
             
-    plt.pie(vals, labels=labels, colors=customcolors, explode=customexplode, autopct='%1.1f%%')
+    plt.pie(vals, labels=labels, colors=customcolors, explode=customexplode, autopct="%1.1f%%")
 
     plt.title("Liverpool FC Player " + stat + " for " + seasonName(season))
     plt.show()
