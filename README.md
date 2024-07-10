@@ -1,4 +1,4 @@
-# Python Pie Chart (TBC)
+# Python Pie Chart
 This builds on the earlier [Python Bar Chart](https://github.com/teochewthunder/python-bar-chart). Differences are highlighted below.
 
 ## Data
@@ -19,3 +19,5 @@ This builds on the earlier [Python Bar Chart](https://github.com/teochewthunder/
 
 ## Chart
 We use the `matplotlib` library to plot the pie chart.
+- `colors` is an argument passed into the `pie()` method. It is a list that contains Hex values. The pie wedges will be colored accordingly.
+- `explode` is an argument passed into the `pie()` method. It is a list that contains float values between 0 and 1. The pie wedges will be displaced from the center according to the value.
